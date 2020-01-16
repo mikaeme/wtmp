@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --link-color: coral;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-content: center;
+    list-style-type: none;
+}
+
+header {
+    background-color: lightgreen;
+    display: flex;
+    height: 30vh;
+}
+
+.logo-area {
+    flex: 2;
+}
+.logo-image {
+    flex: 3;
+    background-image: url("../images/black-frying-pan-with-spaghetti-sauce-near-brown-wooden-691114.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#search {
+    outline: none;
+}
+
+.tri {
+    width: 0;
+    height: 0;
+
+    border-bottom: 30vh solid lightgreen;
+    border-right: 10vw solid transparent;
+}

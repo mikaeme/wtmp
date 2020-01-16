@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="assets/styles.css">
-  </head>
-  <body>
-    <p>Yeah!</p>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="navi">
+            <li class="navi-item">Etusivu</li>
+            <li class="navi-item">Ruokalistat</li>
+            <li class="navi-item">Ravintolat</li>
+            <li class="navi-item">Yhteystiedot</li>
+        </ul>
+        <span id="search">
+            search
+        </span>
+    </nav>
+    <header>
+        <div class="logo-area">
+            <div>Tervetuloa Lounariin!</div>
+        </div>
+        <div class="logo-image">
+            <div class="tri"></div>
+        </div>
+    </header>
+    <main>
+        <section id="info-area">
+            <div id="info">
+                Tammikuussa on kanta-asiakkaille varattu vielä enemmän tarjouksia kuin tavallisesti!
+                Kampanjan ajan tarjoamme Kavereillemme mm. huippulaadukkaat
+                Canagan-kissanruoat 20 % alennuksella
+            </div>
+        </section>
+        <section id="restaurant-area">
+            <div class="restaurant">Mole Hill Mediterranean</div>
+            <div class="restaurant">Oy Keb ab</div>
+        </section>
+
+    </main>
+</body>
+
 </html>

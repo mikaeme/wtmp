@@ -60,10 +60,9 @@ h2 {
 }
 
 h3 {
-  font: 1.2em/1.2 'Roboto Slab', serif;
+  font: bold 1.2em/1.2 'Roboto Slab', serif;
   margin-bottom: 1em;
 }
-
 
 .logo-text {
   flex: 2;
@@ -91,12 +90,20 @@ h3 {
 
 .menu-fi {
   font-size: 0.9em;
+  list-style-type: none;
+  padding-top: 1em;
 }
 
 .menu-en {
   display: none;
   font-size: 0.9em;
+  list-style-type: none;
+  padding-top: 1em;
 } 
+
+.course {
+  padding: 0.5em 0;
+}
 
 #search-box {
   border: 1px solid var(--link-color);
@@ -140,9 +147,13 @@ h3 {
   border-right: 10vw solid transparent;
 }
 
-
 #restaurant-area {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+#lang, #sort {
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
 }

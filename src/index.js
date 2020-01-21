@@ -39,15 +39,14 @@ const changeLang = () => {
 };
 
 const sortOrder = () => {
+    menu.innerHTML = '';
     if (finnish) {
         coursesFi.reverse();
-        menu.innerHTML = '';
         coursesFi.forEach(annos => {
             menu.innerHTML += '<li class="course">' + annos + '</li>';
         });
     } else {
         coursesEn.reverse();
-        menu.innerHTML = '';
         coursesEn.forEach(course => {
             menu.innerHTML += '<li class="course">' + course + '</li>';
         });
@@ -55,8 +54,8 @@ const sortOrder = () => {
 };
 
 const randomCourse = () => {
-    const random = Math.floor(Math.random()*coursesFi.length)+1;
-    if(finnish) {
+    const random = Math.floor(Math.random() * coursesFi.length);
+    if (finnish) {
         alert(coursesFi[random]);
     } else {
         alert(coursesEn[random]);

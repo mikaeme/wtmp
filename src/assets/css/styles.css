@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+:root {
+  --link-color: brown ;
+}
+
+#search-field {
+  outline: none;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+nav ul {
+  display: flex;
+  align-content: center;
+  list-style-type: none;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+a:hover {
+  color: white;
+  background-color: var(--link-color);
+  border: white;
+  border-radius: 5px;
+}
+
+header {
+  background-color: #43e04f;
+  display: flex;
+  height: 30vh;
+}
+
+h1 {
+  font: bold 3.5em/1.2 'Roboto Slab', serif;
+  color: white;
+}
+
+h2 {
+  font: 1.5em/1.2 'Roboto Slab', serif;
+  color: white;
+}
+
+h3 {
+  font: 1.2em/1.2 'Roboto Slab', serif;
+  margin-bottom: 1em;
+}
+
+
+.logo-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  flex: 3;
+  background: url("../images/pan01.jpg") no-repeat center center/cover;
+}
+
+.restaurant {
+  width: 40vw;
+  min-height: 10em;
+  background-color: #eeeeee;
+  padding: 1em;
+  border-radius: 10px;
+  border-style: dotted;
+  border-color: var(--link-color);
+  border-width: 2px;
+}
+
+.menu-fi {
+  font-size: 0.9em;
+}
+
+.menu-en {
+  display: none;
+  font-size: 0.9em;
+} 
+
+#search-box {
+  border: 1px solid var(--link-color);
+  border-radius: 6px;
+  width: 20em;
+  height: 2em;
+}
+
+#search-image {
+  position: absolute;
+  width: 20px;
+}
+
+#search-image > svg {
+  height: 100%;
+  padding:0.3em 0 0 0.5em;
+  fill: var(--link-color);
+}
+
+#search-text {
+  padding: 0.4em 0 0 2em;
+  outline: none;
+}
+
+#info-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#info {
+  width: 60vw;
+  padding: 2em;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 30vh solid #43e04f;
+  border-right: 10vw solid transparent;
+}
+
+
+#restaurant-area {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

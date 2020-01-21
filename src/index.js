@@ -16,6 +16,7 @@ const SortEn = coursesEn;
 const menu = document.querySelector('.menu');
 const langButton = document.querySelector('#lang');
 const sortButton = document.querySelector('#sort');
+const randomButton = document.querySelector('#random');
 let finnish = true;
 
 coursesFi.sort();
@@ -26,14 +27,13 @@ coursesFi.forEach(annos => {
 });
 
 const changeLang = () => {
+    menu.innerHTML = '';
     if (finnish) {
-        menu.innerHTML = '';
         coursesEn.forEach(course => {
             menu.innerHTML += '<li class="course">' + course + '</li>';
         });
         finnish = false;
     } else {
-        menu.innerHTML = '';
         coursesFi.forEach(annos => {
             menu.innerHTML += '<li class="course">' + annos + '</li>';
         });
@@ -42,20 +42,30 @@ const changeLang = () => {
 };
 
 const sortOrder = () => {
+    menu.innerHTML = '';
     if (finnish) {
         coursesFi.reverse();
-        menu.innerHTML = '';
         coursesFi.forEach(annos => {
             menu.innerHTML += '<li class="course">' + annos + '</li>';
         });
     } else {
         coursesEn.reverse();
-        menu.innerHTML = '';
         coursesEn.forEach(course => {
             menu.innerHTML += '<li class="course">' + course + '</li>';
         });
     };
 };
 
+const randomCourse = () => {
+    const random = Math.floor(Math.random()*coursesFi.length);
+    if(finnish) {
+        alert(coursesFi[random]);
+    } else {
+        alert(coursesEn[random]);
+    }
+};
+
+
     langButton.addEventListener('click', changeLang);
     sortButton.addEventListener('click', sortOrder);
+    randomButton.addEventListener('click', randomCourse);

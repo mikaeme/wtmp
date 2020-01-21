@@ -88,18 +88,11 @@ h3 {
   border-width: 2px;
 }
 
-.menu-fi {
+.menu {
   font-size: 0.9em;
   list-style-type: none;
   padding-top: 1em;
 }
-
-.menu-en {
-  display: none;
-  font-size: 0.9em;
-  list-style-type: none;
-  padding-top: 1em;
-} 
 
 .course {
   padding: 0.5em 0;

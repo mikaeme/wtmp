@@ -1,6 +1,6 @@
 const upperLimit = 100;
 const lowerLimit = 1;
-let randomNumber = Math.floor(Math.random() * (upperLimit - lowerLimit +1) + lowerLimit);
+let randomNumber = Math.floor(Math.random() * (upperLimit) + lowerLimit);
 const limits = document.querySelector('#limits');
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');

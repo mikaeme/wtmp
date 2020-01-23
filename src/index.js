@@ -22,7 +22,6 @@ coursesFi.forEach(annos => {
     menu.innerHTML += '<li class="course">' + annos + '</li>';
 });
 
-
 const changeLang = () => {
     menu.innerHTML = '';
     if (finnish) {

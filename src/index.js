@@ -1,66 +1,21 @@
 'use strict';
-
-import LunchMenu from './assets/sodexo.json';
+import {coursesFi, coursesEn} from './modules/sodexo-data';
+import {ChangeLang, finnish} from './modules/language-module';
+import {SortOrder} from './modules/sort-module';
+import {RandomCourse} from './modules/random-module';
 
 const menu = document.querySelector('.menu');
 const langButton = document.querySelector('#lang');
 const sortButton = document.querySelector('#sort');
 const randomButton = document.querySelector('#random');
-const coursesFi = [];
-const coursesEn = [];
-let finnish = true;
-
-for (let i in LunchMenu.courses) {
-    coursesFi.push(LunchMenu.courses[i].title_fi);
-    coursesEn.push(LunchMenu.courses[i].title_en);
-};
-coursesFi.sort();
-coursesEn.sort();
 
 menu.innerHTML = '';
 coursesFi.forEach(annos => {
     menu.innerHTML += '<li class="course">' + annos + '</li>';
 });
 
-const changeLang = () => {
-    menu.innerHTML = '';
-    if (finnish) {
-        coursesEn.forEach(annos => {
-            menu.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        finnish = false;
-    } else {
-        coursesFi.forEach(annos => {
-            menu.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-        finnish = true;
-    };
-};
+langButton.addEventListener('click', ChangeLang);
+sortButton.addEventListener('click', SortOrder);
+randomButton.addEventListener('click', RandomCourse);
 
-const sortOrder = () => {
-    menu.innerHTML = '';
-    if (finnish) {
-        coursesFi.reverse();
-        coursesFi.forEach(annos => {
-            menu.innerHTML += '<li class="course">' + annos + '</li>';
-        });
-    } else {
-        coursesEn.reverse();
-        coursesEn.forEach(course => {
-            menu.innerHTML += '<li class="course">' + course + '</li>';
-        });
-    };
-};
-
-const randomCourse = () => {
-    const random = Math.floor(Math.random() * coursesFi.length);
-    if (finnish) {
-        alert(coursesFi[random]);
-    } else {
-        alert(coursesEn[random]);
-    }
-};
-
-langButton.addEventListener('click', changeLang);
-sortButton.addEventListener('click', sortOrder);
-randomButton.addEventListener('click', randomCourse);
+export {menu, coursesFi, coursesEn};

@@ -5,8 +5,6 @@ import {SortOrder} from './modules/sort-module';
 import {RandomCourse} from './modules/random-module';
 import {fazerFi, fazerEn} from './modules/fazer-data';
 
-console.log(fazerFi);
-console.log(fazerEn);
 const menu = document.querySelector('.menu');
 const menuFazer = document.querySelector('.menuF');
 const langButton = document.querySelector('#lang');

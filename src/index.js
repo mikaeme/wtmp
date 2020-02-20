@@ -11,6 +11,7 @@ const langButton = document.querySelector('#lang');
 const sortButton = document.querySelector('#sort');
 const randomButton = document.querySelector('#random');
 
+console.log('courses', coursesFi);
 menu.innerHTML = '';
 coursesFi.forEach(annos => {
     menu.innerHTML += '<li class="course">' + annos + '</li>';

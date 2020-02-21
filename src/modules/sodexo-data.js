@@ -1,16 +1,15 @@
 'use strict';
 import { getJsonMenu } from './fetch-module';
+import { dd, mm, yyyy} from './date';
 
-let menu;
-
-let coursesFi = [];
+const coursesFi = [];
 const coursesEn = [];
+const today = yyyy + '-' + mm + '-' +dd;
 
 const getMenus = async () => {
-    let response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-02-21');
-    menu = await response;
+    const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
+    const menu = await response;
     parseMenus(menu);
-    console.log('online ', menu);
 };
 
 const parseMenus = async (menu) => {

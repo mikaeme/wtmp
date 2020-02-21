@@ -19,8 +19,6 @@ for (let i in menus) {
     courseEn = [];
 };
 
-
 fazerFi.sort();
 fazerEn.sort();
-
 export {fazerFi, fazerEn};

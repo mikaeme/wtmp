@@ -1,5 +1,5 @@
 'use strict';
-import {coursesFi, coursesEn} from './modules/sodexo-data';
+import {coursesFi, coursesEn, getMenus} from './modules/sodexo-data';
 import {ChangeLang, finnish} from './modules/language-module';
 import {SortOrder} from './modules/sort-module';
 import {RandomCourse} from './modules/random-module';
@@ -11,12 +11,17 @@ const langButton = document.querySelector('#lang');
 const sortButton = document.querySelector('#sort');
 const randomButton = document.querySelector('#random');
 
-console.log('courses', coursesFi);
+const sodexo = async () => {
+    const resp = await getMenus();
 menu.innerHTML = '';
 coursesFi.forEach(annos => {
     menu.innerHTML += '<li class="course">' + annos + '</li>';
 });
+};
+sodexo();
 
+// console.log('fazerFi ', fazerFi);
+menuFazer.innerHTML = '';
 menuFazer.innerHTML = '';
 fazerFi.forEach(annos => {
     menuFazer.innerHTML += '<li class="course">' + annos + '</li>';

@@ -1,13 +1,26 @@
-import LunchMenu from '../assets/sodexo.json';
+'use strict';
+import { getJsonMenu } from './fetch-module';
 
-const coursesFi = [];
+let menu;
+
+let coursesFi = [];
 const coursesEn = [];
 
-for (let i in LunchMenu.courses) {
-    coursesFi.push(LunchMenu.courses[i].title_fi);
-    coursesEn.push(LunchMenu.courses[i].title_en);
+const getMenus = async () => {
+    let response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-02-21');
+    menu = await response;
+    parseMenus(menu);
+    console.log('online ', menu);
 };
-coursesFi.sort();
-coursesEn.sort();
 
-export {coursesEn, coursesFi};
+const parseMenus = async (menu) => {
+
+    for (let i in menu.courses) {
+        coursesFi.push(menu.courses[i].title_fi);
+        coursesEn.push(menu.courses[i].title_en);
+    }
+    coursesFi.sort();
+    coursesEn.sort();
+};
+
+export { coursesEn, coursesFi, getMenus };

@@ -33,4 +33,4 @@ langButton.addEventListener('click', ChangeLang);
 sortButton.addEventListener('click', SortOrder);
 randomButton.addEventListener('click', RandomCourse);
 
-export {menu, coursesFi, coursesEn};
+export {menu, coursesFi, coursesEn, menuFazer, fazerFi, fazerEn};

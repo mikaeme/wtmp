@@ -1,6 +1,8 @@
 'use strict';
 import { coursesFi, coursesEn, fazerFi, fazerEn } from '../index';
 let searchTerm;
+
+
 const searchFor = (result) => {
     if (result.toLowerCase().includes(searchTerm.toLowerCase()))
         return result;

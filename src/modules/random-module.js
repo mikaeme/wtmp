@@ -1,12 +1,14 @@
-import {coursesFi, coursesEn} from './sodexo-data';
+import {coursesFi, coursesEn, fazerFi, fazerEn} from '../index';
 import {finnish} from './language-module';
 
-const RandomCourse = () => {
-    const random = Math.floor(Math.random() * coursesFi.length);
+const RandomCourse = async () => {
+    const allCourses = [...coursesFi, ...fazerFi];
+    const allCoursesEn = [...coursesEn, ...fazerEn];
+    const random =  Math.floor(Math.random() * allCourses.length);
     if (finnish) {
-        alert(coursesFi[random]);
+        alert(allCourses[random]);
     } else {
-        alert(coursesEn[random]);
+        alert(allCoursesEn[random]);
     }
 };
 

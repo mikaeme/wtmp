@@ -7,7 +7,8 @@ const coursesEn = [];
 const today = yyyy + '-' + mm + '-' +dd;
 
 const getMenus = async () => {
-    const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
+    const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/2020-02-20');
+    // const response = await getJsonMenu('https://www.sodexo.fi/ruokalistat/output/daily_json/152/' + today);
     const menu = await response;
     parseMenus(menu);
 };

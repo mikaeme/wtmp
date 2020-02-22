@@ -1,9 +1,20 @@
 'use strict';
-import {coursesFi, coursesEn, fazerFi, fazerEn} from '../index';
-
-const search = async () => {
-    //evt.preventDefault();
-    console.log('juhuu');
+import { coursesFi, coursesEn, fazerFi, fazerEn } from '../index';
+let searchTerm;
+const searchFor = (result) => {
+    if (result.toLowerCase().includes(searchTerm.toLowerCase()))
+        return result;
 };
 
-export {search};
+const search = async (text) => {
+    searchTerm = text;
+    alert(coursesFi.filter(searchFor));
+};
+
+const submitSearch = async (evt) => {
+    evt.preventDefault();
+    const text = document.querySelector('#search-field').value;
+        search(text);
+    };
+
+export { submitSearch };

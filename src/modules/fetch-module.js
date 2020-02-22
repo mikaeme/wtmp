@@ -1,7 +1,7 @@
 'use strict';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com';
 
-const getJsonMenu = async (menuUrl, useProxy=true) => {
+const getJsonMenu = async (menuUrl, useProxy = true) => {
     let response;
     try {
         response = await fetch(`${useProxy ? proxyUrl: ''}/${menuUrl}`);

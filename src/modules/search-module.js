@@ -13,10 +13,10 @@ const search = async (text) => {
     alert(coursesFi.filter(searchFor));
 };
 
-const submitSearch = async (evt) => {
+const SubmitSearch = async (evt) => {
     evt.preventDefault();
     const text = document.querySelector('#search-field').value;
         search(text);
     };
 
-export { submitSearch };
+export { SubmitSearch };

@@ -6,10 +6,16 @@
 
 body {
   font-family: 'Lato', Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 :root {
   --link-color: brown ;
+  --main-color: #43e04f;
+  --background: #fff;
+  --restaurant-background: #eee;
+  --text: #000;
 }
 
 #search-field {
@@ -37,26 +43,26 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: var(--background);
   background-color: var(--link-color);
-  border: white;
+  border: var(--background);
   border-radius: 5px;
 }
 
 header {
-  background-color: #43e04f;
+  background-color: var(--main-color);
   display: flex;
   height: 30vh;
 }
 
 h1 {
   font: bold 3.5em/1.2 'Roboto Slab', serif;
-  color: white;
+  color: var(--background);
 }
 
 h2 {
   font: 1.5em/1.2 'Roboto Slab', serif;
-  color: white;
+  color: var(--background);
 }
 
 h3 {
@@ -81,10 +87,14 @@ h3 {
   padding: 1em 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .restaurant {
   width: 40vw;
   min-height: 10em;
-  background-color: #eeeeee;
+  background-color: var(--restaurant-background);
   padding: 1em;
   border-radius: 10px;
   border-style: dotted;
@@ -112,6 +122,7 @@ h3 {
 #search-image {
   position: absolute;
   width: 20px;
+  cursor: pointer;
 }
 
 #search-image > svg {
@@ -140,7 +151,7 @@ h3 {
 #triangle {
   width: 0;
   height: 0;
-  border-bottom: 30vh solid #43e04f;
+  border-bottom: 30vh solid var(--main-color);
   border-right: 10vw solid transparent;
 }
 
@@ -154,3 +165,17 @@ h3 {
   padding: 0.5em 1em;
   margin: 0.5em 0;
 }
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em 0;
+}
+
+.customize {
+  background-color: var(--main-color);
+  color: var(--background);
+  padding: 1em;
+  cursor: pointer;
+}
+

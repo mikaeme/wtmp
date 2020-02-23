@@ -4,7 +4,8 @@ import {ChangeLang, finnish} from './modules/language-module';
 import {SortOrder} from './modules/sort-module';
 import {RandomCourse} from './modules/random-module';
 import {fazerFi, fazerEn, getFazerMenus} from './modules/fazer-data';
-import {submitSearch} from './modules/search-module';
+import {SubmitSearch} from './modules/search-module';
+import {ChangeColor} from './modules/customization-module';
 
 const menu = document.querySelector('.menu');
 const menuFazer = document.querySelector('.menuF');
@@ -13,6 +14,8 @@ const sortButton = document.querySelector('#sort');
 const randomButton = document.querySelector('#random');
 const searchButton = document.querySelector('#search-image');
 const searchField = document.querySelector('#search-text');
+const colorTheme = document.querySelector('#color-theme');
+const body = document.querySelector('body');
 
 const sodexo = async () => {
     const resp = await getMenus();
@@ -35,7 +38,8 @@ fazer();
 langButton.addEventListener('click', ChangeLang);
 sortButton.addEventListener('click', SortOrder);
 randomButton.addEventListener('click', RandomCourse);
-searchButton.addEventListener('click', submitSearch);
-searchField.addEventListener('submit', submitSearch);
+searchButton.addEventListener('click', SubmitSearch);
+searchField.addEventListener('submit', SubmitSearch);
+colorTheme.addEventListener('click', ChangeColor);
 
-export {menu, coursesFi, coursesEn, menuFazer, fazerFi, fazerEn};
+export {menu, coursesFi, coursesEn, menuFazer, fazerFi, fazerEn, body};
